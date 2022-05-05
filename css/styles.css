@@ -10,6 +10,8 @@
   --headline: #b67746;
   --white: #ffffff;
   --lightBrown: #9b8571;
+  --light: #ffdfba;
+  --lightBlue: #d0e3ef;
 }
 
 *,
@@ -20,39 +22,123 @@
   box-sizing: border-box;
   list-style: none;
   text-decoration: none;
+  color: var(--dark);
+}
+
+button {
+  all: unset;
+  cursor: pointer;
 }
 
 /*Mobile*/
 
 body {
   width: 100vw;
+  position: relative;
 }
 
 header {
   width: 100%;
 }
 
+.active {
+  text-decoration: underline;
+}
+
+.close {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  width: 50px;
+  height: 50px;
+  background-image: url(/images/icons8-close-50.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 nav {
+  position: relative;
+  background-color: #d0e3ef;
+  width: 95vw;
+  max-width: 440px;
+  height: 80vh;
+  border-radius: 10px;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+nav ul {
+  width: 50vw;
+  max-width: 440px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+nav li {
+  margin-bottom: 40px;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+nav a {
+  font-size: 1.7rem;
+  font-family: "Montserrat", Verdana, Geneva, Tahoma, sans-serif;
+}
+
+nav .search {
+  padding: 10px;
+  border-radius: 10px;
+  border: 2px solid var(--dark);
+  font-family: "Montserrat", Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1.1rem;
+  display: none;
+  background-image: url(/images/search.png);
+  background-repeat: no-repeat;
+  background-size: 15%;
+  background-position: right;
+}
+
+.search_desktop {
   display: none;
 }
 
+nav .search:hover,
+nav .search:focus {
+  border: 2px solid var(--headline);
+  outline: none;
+}
+
 .top_container {
+  margin: auto;
+  width: 100%;
+  max-width: 460px;
+}
+
+.topInner_container {
   display: flex;
   justify-content: start;
   position: relative;
   margin-top: 80px;
 }
 
-.logo_container,
-.nav_container {
-  width: 50px;
-  height: 50px;
-  background-color: blue;
+.logo_container img {
+  width: 70px;
+  height: 70px;
 }
 
 .nav_container {
-  background-color: blueviolet;
+  background-image: url(/images//icons8-menu-72\(@3x\).png);
+  margin-left: 10px;
   position: absolute;
+  width: 70px;
+  height: 70px;
 }
 
 .logo_container {
@@ -61,8 +147,11 @@ nav {
 
 .header_img {
   width: 100%;
-  height: 65px;
-  background-color: aquamarine;
+  height: 80px;
+  background-image: url(/images/jupiter.jpg);
+  background-position: center 42%;
+  background-size: 180%;
+  background-repeat: no-repeat;
   margin-top: 20px;
 }
 
@@ -71,7 +160,12 @@ footer p {
   font-family: "Montserrat", Verdana, Tahoma, sans-serif;
   font-size: 0.8rem;
   width: 90%;
+  max-width: 430px;
   margin: 5px auto;
+}
+
+.breadcrumbs p {
+  display: inline-block;
 }
 
 /* Homepage */
@@ -98,11 +192,19 @@ h1 {
   color: var(--headline);
 }
 
+.main_container {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  background-color: unset;
+}
+
 .main_card {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 85%;
+  max-width: 350px;
   height: 90px;
   margin: 30px auto;
   border-radius: 10px;
@@ -133,3 +235,92 @@ footer p {
 /*/ Homepage */
 
 /*/Mobile*/
+
+/* Desktop*/
+
+@media only screen and (min-width: 900px) {
+  .indexBody {
+    width: 100vw;
+    max-width: 1000px;
+    height: 100vh;
+    margin: auto;
+    background-color: black;
+    background-image: url(/images/jupiter.jpg);
+    background-position: right;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .top_container {
+    max-width: 1000px;
+  }
+
+  .topInner_container {
+    all: unset;
+  }
+
+  .logo_container,
+  .close,
+  .search_mobile,
+  .header_img,
+  .breadcrumbs,
+  .main_container {
+    display: none;
+  }
+
+  .search_desktop {
+    display: block;
+  }
+
+  .nav_container {
+    all: unset;
+    display: block;
+  }
+
+  nav {
+    all: unset;
+    display: flex;
+    justify-content: end;
+    margin-top: 150px;
+    margin-right: 20px;
+  }
+
+  nav ul {
+    all: unset;
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+  }
+
+  nav a {
+    font-size: 1.2rem;
+    color: var(--light);
+  }
+
+  .headline_container {
+    background-color: black;
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+  }
+
+  .headline_container p {
+    color: var(--headline);
+  }
+
+  .headline_container h1 {
+    color: var(--light);
+  }
+
+  footer {
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    width: 100%;
+  }
+
+  footer p {
+    color: white;
+  }
+}
+
+/*/ Desktop*/

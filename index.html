@@ -20,25 +20,44 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="/css/index.css" />
     <title>Homepage | All things Jupiter</title>
   </head>
-  <body>
+  <body class="indexBody">
     <header>
       <div class="top_container">
-        <div class="nav_container">
-          <nav>
-            <ul>
-              <li>home</li>
-              <li>blog</li>
-              <li>about</li>
-              <li>categories</li>
-              <li>contact</li>
-              <li><input type="text" name="" id="" />search</li>
-            </ul>
-          </nav>
-        </div>
-        <div class="logo_container">
-          <a href=""><img src="" alt="" class="logo_image" /></a>
+        <div class="topInner_container">
+          <div class="nav_container">
+            <nav>
+              <button aria-label="close navigation" class="close"></button>
+              <ul>
+                <li><a href="" class="active">home</a></li>
+                <li><a href="">blog</a></li>
+                <li><a href="">about</a></li>
+                <li><a href="">categories</a></li>
+                <li><a href="">contact</a></li>
+                <li>
+                  <input type="text" name="search" id="search" class="search" /><label
+                    for="search"
+                    class="search_mobile"
+                  >
+                    <img src="/images/search.png" alt="click to search"
+                  /></label>
+                  <input type="text" name="search" id="searchDesktop" class="search" /><label
+                    for="searchDesktop"
+                    class="search_desktop"
+                  >
+                    <img src="/images/searchdesktop.png" alt="click to search"
+                  /></label>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="logo_container">
+            <a href="/index.html"
+              ><img src="/images/icons8-jupiter-58.png" alt="Logo" class="logo_image"
+            /></a>
+          </div>
         </div>
       </div>
       <div class="header_img"></div>
@@ -51,7 +70,7 @@
         <p>All things</p>
         <h1>Jupiter</h1>
       </section>
-      <div class="main_container">
+      <nav class="main_container">
         <section class="main_card">
           <a href="/blog.html"><h2>blog</h2></a>
         </section>
@@ -64,7 +83,7 @@
         <section class="main_card">
           <a href="/contact.html"><h2>contact</h2></a>
         </section>
-      </div>
+      </nav>
     </main>
     <footer><p>Copyright 'all things Jupiter' 2022</p></footer>
   </body>
