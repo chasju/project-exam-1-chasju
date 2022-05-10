@@ -334,6 +334,7 @@ footer p {
   width: 60%;
   max-width: 300px;
   font-weight: 500;
+  font-family: "montserrat", Verdana, Geneva, Tahoma, sans-serif;
   margin-bottom: 15px;
 }
 
@@ -410,6 +411,21 @@ footer p {
 }
 
 /*/ Blog */
+
+/* Categories */
+
+.categories_container {
+  flex-direction: row;
+  height: unset;
+  flex-wrap: wrap;
+}
+
+.categories_container .main_card {
+  width: 180px;
+  height: 200px;
+}
+
+/*/ Categories */
 
 /*/Mobile*/
 
@@ -602,6 +618,11 @@ footer p {
   }
   .latestPosts_container a {
     width: 200px;
+  }
+
+  .categories_container {
+    display: flex;
+    width: 800px;
   }
 
   footer p {
