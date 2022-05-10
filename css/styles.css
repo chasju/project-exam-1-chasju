@@ -204,7 +204,7 @@ footer p {
 }
 
 h1 {
-  font-family: "impact", sans-serif;
+  font-family: "impact", "impactreg", sans-serif;
   text-transform: uppercase;
   font-size: 4rem;
   letter-spacing: 6px;
@@ -241,13 +241,13 @@ h1 {
 }
 
 .latestPosts_container h2 {
-  font-family: "impact", sans-serif;
+  font-family: "impact", "impactreg", sans-serif;
   color: var(--dark);
   text-transform: uppercase;
 }
 
 .latestPosts_container h3 {
-  font-family: "impact", sans-serif;
+  font-family: "impact", "impactreg", sans-serif;
   color: var(--headline);
   letter-spacing: 2px;
 }
@@ -289,7 +289,7 @@ h1 {
 }
 
 .main_card h2 {
-  font-family: "impact", sans-serif;
+  font-family: "impact", "impactreg", sans-serif;
   color: var(--white);
   font-size: 1.8rem;
   letter-spacing: 1px;
@@ -363,7 +363,7 @@ footer p {
 }
 
 .blog_header h2 {
-  font-family: "impact", sans-serif;
+  font-family: "impact", "impactreg", sans-serif;
   color: var(--headline);
   letter-spacing: 1px;
 }
@@ -391,7 +391,7 @@ footer p {
   height: 40px;
   background-color: var(--lightBrown);
   color: white;
-  font-family: "impact", sans-serif;
+  font-family: "impact", "impactreg", sans-serif;
   letter-spacing: 2px;
   text-transform: uppercase;
   text-align: center;
