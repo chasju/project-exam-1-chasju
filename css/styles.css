@@ -23,6 +23,7 @@
   list-style: none;
   text-decoration: none;
   color: var(--dark);
+  font-family: "monserrat", Verdana, Geneva, Tahoma, sans-serif;
 }
 
 button {
@@ -34,6 +35,7 @@ button {
 
 body {
   width: 100vw;
+  min-height: 100vh;
   position: relative;
 }
 
@@ -43,6 +45,22 @@ header {
 
 .active {
   text-decoration: underline;
+}
+
+.back_button {
+  background-image: url(/images/arrow.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 25px;
+  width: 25px;
+  padding-left: 25px;
+  position: absolute;
+  top: -60px;
+  left: 0;
+}
+
+.back_button-desktop {
+  display: none;
 }
 
 .close {
@@ -67,6 +85,7 @@ nav {
   display: none;
   justify-content: center;
   align-items: center;
+  z-index: 10;
 }
 
 nav ul {
@@ -89,14 +108,12 @@ nav li {
 
 nav a {
   font-size: 1.7rem;
-  font-family: "Montserrat", Verdana, Geneva, Tahoma, sans-serif;
 }
 
 nav .search {
   padding: 10px;
   border-radius: 10px;
   border: 2px solid var(--dark);
-  font-family: "Montserrat", Verdana, Geneva, Tahoma, sans-serif;
   font-size: 1.1rem;
   display: none;
   background-image: url(/images/search.png);
@@ -119,13 +136,15 @@ nav .search:focus {
   margin: auto;
   width: 100%;
   max-width: 460px;
+  position: relative;
 }
 
 .topInner_container {
   display: flex;
   justify-content: start;
+  align-items: center;
   position: relative;
-  margin-top: 80px;
+  margin-top: 140px;
 }
 
 .logo_container img {
@@ -135,10 +154,11 @@ nav .search:focus {
 
 .nav_container {
   background-image: url(/images//icons8-menu-72\(@3x\).png);
+  background-size: cover;
   margin-left: 10px;
   position: absolute;
-  width: 70px;
-  height: 70px;
+  width: 50px;
+  height: 50px;
 }
 
 .logo_container {
@@ -147,17 +167,16 @@ nav .search:focus {
 
 .header_img {
   width: 100%;
-  height: 80px;
+  height: 140px;
   background-image: url(/images/jupiter.jpg);
   background-position: center 42%;
   background-size: 180%;
   background-repeat: no-repeat;
-  margin-top: 20px;
+  margin-top: 90px;
 }
 
 .breadcrumbs,
 footer p {
-  font-family: "Montserrat", Verdana, Tahoma, sans-serif;
   font-size: 0.8rem;
   width: 90%;
   max-width: 430px;
@@ -286,13 +305,15 @@ h1 {
 }
 
 footer {
-  position: absolute;
-  bottom: 0;
-  text-align: center;
   width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: center;
 }
 
 footer p {
+  position: absolute;
+  bottom: 0;
   text-align: center;
   margin: 60px auto 30px;
 }
@@ -301,19 +322,81 @@ footer p {
 
 /* About */
 
-.main_about h1 {
+.main_section {
+  margin-top: 70px;
+}
+
+.main_section h1 {
   margin-bottom: 30px;
 }
 
-.main_about p {
+.main_section p {
   width: 60%;
   max-width: 300px;
-  font-family: "Montserrat", Verdana, Geneva, Tahoma, sans-serif;
   font-weight: 500;
   margin-bottom: 15px;
 }
 
 /*/ About */
+
+/* Blog */
+
+.blog_section p {
+  width: unset;
+  font-weight: 700;
+  margin-bottom: unset;
+}
+
+.blog_post {
+  width: 90%;
+  max-width: 550px;
+  margin: auto;
+}
+
+.blog_post p {
+  padding-bottom: 20px;
+}
+
+.blog_header {
+  align-items: unset;
+}
+
+.blog_header h2 {
+  font-family: "impact", sans-serif;
+  color: var(--headline);
+  letter-spacing: 1px;
+}
+
+.blog_post .blog_meta {
+  font-family: "montserrat", Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 100;
+  padding: 10px 0;
+}
+
+.blog_image {
+  background-image: url(/images/jupiter-zoomed.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+  height: 300px;
+  margin-bottom: 30px;
+}
+
+.cta_button {
+  display: block;
+  margin: 40px auto;
+  width: 100px;
+  height: 40px;
+  background-color: var(--lightBrown);
+  color: white;
+  font-family: "impact", sans-serif;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+/*/ Blog */
 
 /*/Mobile*/
 
@@ -331,6 +414,15 @@ footer p {
     background-size: cover;
     background-repeat: no-repeat;
   }
+
+  header {
+    background-image: url(/images/jupiter.jpg);
+    background-position: right;
+    background-size: 140%;
+    background-repeat: no-repeat;
+    height: 250px;
+  }
+
   .top_container {
     max-width: 1000px;
   }
@@ -344,7 +436,8 @@ footer p {
   .search_mobile,
   .header_img,
   .breadcrumbs,
-  .main_container {
+  .main_container,
+  .back_button {
     display: none;
   }
 
@@ -360,9 +453,14 @@ footer p {
   nav {
     all: unset;
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
     margin-top: 150px;
     margin-right: 20px;
+  }
+
+  .nav_section {
+    margin-top: unset;
+    padding-top: 100px;
   }
 
   nav ul {
@@ -379,15 +477,21 @@ footer p {
 
   .main_index {
     background-color: black;
-    width: 700px;
-    height: 700px;
+    width: 850px;
+    height: 850px;
     border-radius: 50%;
     margin: auto 10px auto auto;
+  }
+
+  .back_button-desktop {
+    display: block;
+    top: 45px;
   }
 
   .headline_container {
     margin: auto;
     padding: 45px;
+    padding-top: 110px;
   }
 
   .headline_container p {
@@ -396,6 +500,53 @@ footer p {
 
   .headline_container h1 {
     color: var(--light);
+  }
+
+  .main_section {
+    width: 600px;
+    position: relative;
+    align-items: unset;
+  }
+
+  .main_section h1 {
+    color: var(--headline);
+    width: 100%;
+    padding-top: 50px;
+  }
+
+  .main_section p {
+    color: var(--dark);
+    width: 80%;
+    max-width: unset;
+  }
+
+  .blog_header {
+    background-image: unset;
+    height: unset;
+    padding: 0;
+  }
+
+  .blog_section {
+    align-items: center;
+  }
+
+  .blog_section h1 {
+    padding-top: unset;
+    width: unset;
+  }
+
+  .blog_section p {
+    width: unset;
+  }
+
+  .blog_image {
+    margin-top: 30px;
+    height: 500px;
+  }
+
+  .blog_post {
+    width: 100%;
+    max-width: 800px;
   }
 
   .latest_container {
@@ -410,6 +561,12 @@ footer p {
   .latestPosts_container a:nth-child(3),
   .latestPosts_container a:nth-child(4) {
     display: block;
+  }
+
+  .left_arrow,
+  .right_arrow {
+    background-image: url(/images/arrow-light.png);
+    top: 190px;
   }
 
   .latestPosts_container {
@@ -434,6 +591,10 @@ footer p {
 
   footer p {
     color: white;
+  }
+
+  .footer_section p {
+    color: black;
   }
 }
 

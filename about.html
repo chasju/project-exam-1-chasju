@@ -25,15 +25,16 @@
   <body>
     <header>
       <div class="top_container">
+        <button class="back_button">Back</button>
         <div class="topInner_container">
           <div class="nav_container">
-            <nav>
+            <nav class="nav_section">
               <ul>
-                <li><a href="">home</a></li>
-                <li><a href="">blog</a></li>
-                <li><a href="" class="active">about</a></li>
-                <li><a href="">categories</a></li>
-                <li><a href="">contact</a></li>
+                <li><a href="/index.html">home</a></li>
+                <li><a href="/blog.html">blog</a></li>
+                <li><a href="/about.html" class="active">about</a></li>
+                <li><a href="/categories.html">categories</a></li>
+                <li><a href="/contact.html">contact</a></li>
                 <li>
                   <input type="text" name="search" id="search" class="search" /><label
                     for="search"
@@ -65,7 +66,8 @@
       </div>
     </header>
     <main>
-      <section class="headline_container main_about">
+      <section class="headline_container main_section">
+        <button class="back_button back_button-desktop">Back</button>
         <h1>About</h1>
         <p>Jupiter is the best - don’t you agree?</p>
         <p>
@@ -75,6 +77,6 @@
         <p>This website is dedicated to everything you need to know about Jupiter.</p>
       </section>
     </main>
-    <footer><p>Copyright 'all things Jupiter' 2022</p></footer>
+    <footer class="footer_section"><p>Copyright 'all things Jupiter' 2022</p></footer>
   </body>
 </html>
