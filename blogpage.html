@@ -22,9 +22,10 @@
   <body>
     <header>
       <div class="top_container">
+        <button class="back_button">Back</button>
         <div class="topInner_container">
           <div class="nav_container">
-            <nav>
+            <nav class="nav_section">
               <ul>
                 <li><a href="/index.html">home</a></li>
                 <li><a href="/blog.html" class="active">blog</a></li>
@@ -57,8 +58,30 @@
       </div>
       <div class="header_img"></div>
       <div class="breadcrumbs">
-        <p>Home</p>
+        <p><a href="/index.html">Home</a></p>
+        <p>| Blog</p>
       </div>
     </header>
+    <main>
+      <section class="headline_container main_section blog_section">
+        <button class="back_button back_button-desktop">Back</button>
+      </section>
+      <div class="blog_posts">
+        <section class="blog_post">
+          <header class="headline_container blogpage_container">
+            <h1>Example headline</h1>
+            <p class="blog_meta">Date: 23/4/2022</p>
+            <p class="blog_meta">Categories: Jupiter, Planets, Evolution</p>
+          </header>
+          <div class="blog_image"></div>
+          <p>
+            Jupiter is the third brightest natural object in the Earth's night sky after the Moon
+            and Venus, and it has been observed since prehistoric times. It was named after the
+            Roman god Jupiter, the king of the gods.
+          </p>
+        </section>
+      </div>
+    </main>
+    <footer class="footer_section"><p>Copyright 'all things Jupiter' 2022</p></footer>
   </body>
 </html>

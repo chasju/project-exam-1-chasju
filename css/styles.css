@@ -52,7 +52,7 @@ header {
   background-size: contain;
   background-repeat: no-repeat;
   height: 25px;
-  width: 25px;
+  width: 50px;
   padding-left: 25px;
   position: absolute;
   top: -60px;
@@ -369,7 +369,7 @@ footer p {
 
 .blog_post .blog_meta {
   font-family: "montserrat", Verdana, Geneva, Tahoma, sans-serif;
-  font-weight: 100;
+  font-weight: 300;
   padding: 10px 0;
 }
 
@@ -394,6 +394,19 @@ footer p {
   letter-spacing: 2px;
   text-transform: uppercase;
   text-align: center;
+}
+
+.blogpage_container h1 {
+  text-align: center;
+}
+
+.blogpage_container .blog_meta {
+  padding: 3px 0;
+  color: var(--dark);
+}
+
+.blogpage_container .blog_meta:nth-child(3) {
+  font-size: 13px;
 }
 
 /*/ Blog */
@@ -508,7 +521,8 @@ footer p {
     align-items: unset;
   }
 
-  .main_section h1 {
+  .main_section h1,
+  .blogpage_container h1 {
     color: var(--headline);
     width: 100%;
     padding-top: 50px;
@@ -520,7 +534,8 @@ footer p {
     max-width: unset;
   }
 
-  .blog_header {
+  .blog_header,
+  .blogpage_container {
     background-image: unset;
     height: unset;
     padding: 0;
