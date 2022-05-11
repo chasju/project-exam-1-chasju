@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
     <meta
       name="description"
       content="Contact information. Phone: +47 12345678. e-mail: jupiter@isawesome.cool"
@@ -25,9 +25,10 @@
   <body>
     <header>
       <div class="top_container">
+        <button class="back_button">Back</button>
         <div class="topInner_container">
           <div class="nav_container">
-            <nav>
+            <nav class="nav_section">
               <ul>
                 <li><a href="/index.html">home</a></li>
                 <li><a href="/blog.html">blog</a></li>
@@ -60,8 +61,31 @@
       </div>
       <div class="header_img"></div>
       <div class="breadcrumbs">
-        <p>Home</p>
+        <p><a href="/index.html">Home</a></p>
+        <p>| Contact</p>
       </div>
     </header>
+    <main>
+      <section class="headline_container main_section">
+        <button class="back_button back_button-desktop">Back</button>
+        <h1>Contact</h1>
+      </section>
+      <section class="contact_container">
+        <div>
+          <label for="fullName">name</label>
+          <input type="text" name="name" id="fullName" class="fullName" />
+          <label for="email">email address</label>
+          <input type="email" name="email" id="email" class="email" />
+          <label for="subject">subject</label>
+          <input type="text" name="subject" id="subject" class="subject" />
+        </div>
+        <div>
+          <label for="textarea">message</label>
+          <textarea name="textarea" id="textarea" class="textarea" cols="30" rows="10"></textarea>
+          <button class="cta_button contact_button">Send</button>
+        </div>
+      </section>
+    </main>
+    <footer class="footer_section"><p>Copyright 'all things Jupiter' 2022</p></footer>
   </body>
 </html>
