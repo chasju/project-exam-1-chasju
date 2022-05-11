@@ -454,6 +454,7 @@ footer p {
   border: none;
   border-radius: 5px;
   box-shadow: 3px 3px 20px rgba(79, 70, 62, 0.5);
+  -webkit-box-shadow: 3px 3px 20px rgba(79, 70, 62, 0.5);
 }
 
 .contact_container input:not(:last-child) {
