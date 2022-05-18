@@ -280,6 +280,10 @@ h1 {
   transition: transform 0.4s ease-in-out;
 }
 
+.carousel_images-mobile {
+  display: none;
+}
+
 .main_container {
   display: flex;
   flex-direction: column;
@@ -503,6 +507,33 @@ footer p {
   letter-spacing: 1px;
 }
 
+.error_message {
+  color: red;
+  font-size: 13px;
+  letter-spacing: 1px;
+  padding-bottom: 10px;
+  display: none;
+}
+
+.error_textarea {
+  padding-top: 10px;
+}
+
+.thankyou_message {
+  text-align: center;
+  display: none;
+}
+
+.thankyou_message h3 {
+  color: var(--lightBrown);
+  font-size: 2rem;
+}
+
+.thankyou_message p {
+  font-size: 1rem;
+  margin: 20px auto;
+}
+
 /*/ Contact */
 
 /*/Mobile*/
@@ -696,10 +727,20 @@ footer p {
   .latestPosts_container article {
     flex-wrap: wrap;
     justify-content: space-between;
+    width: 450px;
+    flex-shrink: 0;
+  }
+
+  .carousel_container {
+    display: flex;
   }
 
   .carousel_images {
     height: 480px;
+  }
+
+  .carousel_images-mobile {
+    display: flex;
   }
 
   .latestPosts_container a {
