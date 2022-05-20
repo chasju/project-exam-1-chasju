@@ -35,6 +35,7 @@
       href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap"
       rel="stylesheet"
     />
+    <script src="https://kit.fontawesome.com/3f52b12258.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/css/styles.css" />
     <title>About | All things Jupiter</title>
   </head>
@@ -53,18 +54,19 @@
                 <li><a href="/categories.html">categories</a></li>
                 <li><a href="/contact.html">contact</a></li>
                 <li>
-                  <input type="text" name="search" id="search" class="search" /><label
-                    for="search"
-                    class="search_mobile"
-                  >
-                    <img src="/images/search.png" alt="click to search"
-                  /></label>
-                  <input type="text" name="search" id="searchDesktop" class="search" /><label
-                    for="searchDesktop"
-                    class="search_desktop"
-                  >
-                    <img src="/images/searchdesktop.png" alt="click to search"
-                  /></label>
+                  <div class="search_content">
+                    <div class="search">
+                      <input
+                        type="text"
+                        aria-label="search"
+                        placeholder="Search"
+                        class="search_input"
+                      />
+                      <button aria-label="submit search" class="search_button">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                      </button>
+                    </div>
+                  </div>
                 </li>
               </ul>
             </nav>
