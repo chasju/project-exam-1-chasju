@@ -21,7 +21,7 @@ if (window.innerWidth <= "900") {
       containerImages.innerHTML = "";
 
       for (let i = 0; i < posts.length; i++) {
-        if (i >= 4) {
+        if (i >= 8) {
           break;
         }
 
