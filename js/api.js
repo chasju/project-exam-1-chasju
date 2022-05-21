@@ -65,6 +65,7 @@ if (window.innerWidth <= "900") {
       });
     } catch (error) {
       console.log(error);
+      containerImages.innerHTML = error;
     }
   }
 
@@ -160,6 +161,7 @@ if (window.innerWidth >= "900") {
       });
     } catch (error) {
       console.log(error);
+      containerImages.innerHTML = error;
     }
   }
 
