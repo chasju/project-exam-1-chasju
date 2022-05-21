@@ -1,7 +1,7 @@
 // fetching posts
 
 const baseUrl =
-  "http://chasju.online/allthingsjupiter/wp-json/wp/v2/posts?acf_format=standard&per_page=20";
+  "https://chasju.online/allthingsjupiter/wp-json/wp/v2/posts?acf_format=standard&per_page=20";
 const containerImages = document.querySelector(".carousel_images");
 
 window.onresize = () => {
