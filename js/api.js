@@ -18,12 +18,14 @@ if (window.innerWidth <= "900") {
       const response = await fetch(url);
       const posts = await response.json();
 
+      containerImages.innerHTML = "";
+
       for (let i = 0; i < posts.length; i++) {
         if (i === 4) {
           break;
         }
 
-        containerImages.innerHTML += `<a href="/blogpage.html"
+        containerImages.innerHTML += `<a href="/blogpage.html?id=${posts[i].id}"
                 ><div class="latest_image" style="background-image: url(${posts[i].acf.header_image})"></div>
                 <h3>${posts[i].acf.headline}</h3></a
               >`;
@@ -77,12 +79,14 @@ if (window.innerWidth >= "900") {
       const response = await fetch(url);
       const posts = await response.json();
 
+      containerImages.innerHTML = "";
+
       for (let i = 0; i < posts.length; i++) {
         if (i === 4) {
           break;
         }
 
-        containerImages.innerHTML += `<a href="/blogpage.html"
+        containerImages.innerHTML += `<a href="/blogpage.html?id=${posts[i].id}"
                 ><div class="latest_image" style="background-image: url(${posts[i].acf.header_image})"></div>
                 <h3>${posts[i].acf.headline}</h3></a
               >`;

@@ -295,6 +295,38 @@ h1 {
   display: none;
 }
 
+.dots__container {
+  width: 100px;
+  height: 50px;
+  margin: auto;
+  padding-top: 50px;
+  text-align: center;
+}
+
+.one,
+.two,
+.three {
+  width: 20px;
+  height: 20px;
+  background-color: var(--lightBrown);
+  border-radius: 50%;
+  display: inline-block;
+  animation: jump 1s linear infinite;
+}
+
+@keyframes jump {
+  0% {
+    transform: translateY(-15px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.two {
+  animation-delay: 0.3s;
+}
+
 .main_container {
   display: flex;
   flex-direction: column;
