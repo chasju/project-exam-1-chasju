@@ -19,6 +19,7 @@ if (window.innerWidth <= "900") {
       const posts = await response.json();
 
       containerImages.innerHTML = "";
+      console.log(posts.length);
 
       for (let i = 0; i < posts.length; i++) {
         if (i >= 8) {
@@ -137,8 +138,6 @@ if (window.innerWidth >= "900") {
       const containerWidth = carouselContainer[0].clientWidth;
 
       // Next slide
-
-      console.log(carouselImage.length);
 
       nextButton.addEventListener("click", () => {
         if (counter >= carouselContainer.length - 1) return;
