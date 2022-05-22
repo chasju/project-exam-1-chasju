@@ -10,7 +10,8 @@ console.log(idUrl);
 async function getBlogPost(url) {
   const response = await fetch(url);
   const post = await response.json();
-  console.log(post);
+
+  document.title = `${post.acf.headline}`;
 
   blogPost.innerHTML = `<section class="blog_post">
           <header class="headline_container blogpage_container">
