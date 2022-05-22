@@ -12,7 +12,7 @@ async function getPosts(url) {
   blogPosts.innerHTML = "";
 
   for (let i = 0; i < posts.length; i++) {
-    if (i === 12) {
+    if (i === 10) {
       break;
     }
 
