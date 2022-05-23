@@ -74,7 +74,7 @@ header {
 
 .close {
   position: absolute;
-  top: 15px;
+  top: 50px;
   left: 15px;
   width: 50px;
   height: 50px;
@@ -86,15 +86,20 @@ header {
 
 nav {
   position: relative;
-  background-color: #d0e3ef;
-  width: 95vw;
-  max-width: 440px;
-  height: 80vh;
-  border-radius: 10px;
+  background-color: white;
   display: none;
-  justify-content: center;
-  align-items: center;
   z-index: 10;
+}
+
+.nav_mobile {
+  position: absolute;
+  max-width: unset;
+  width: 100%;
+  height: 60vh;
+  border-radius: 0 0 10px;
+  box-shadow: 3px 3px 20px rgba(79, 70, 62, 0.5);
+  -webkit-appearance: none;
+  -webkit-box-shadow: 3px 3px 20px rgba(79, 70, 62, 0.5);
 }
 
 nav ul {
@@ -116,7 +121,7 @@ nav li {
 }
 
 nav a {
-  font-size: 1.7rem;
+  font-size: 1.5rem;
   color: var(--dark);
 }
 
@@ -158,7 +163,7 @@ nav .search:focus {
   justify-content: start;
   align-items: center;
   position: relative;
-  margin-top: 140px;
+  padding-top: 140px;
 }
 
 .logo_container img {
@@ -654,6 +659,10 @@ footer p {
     justify-content: flex-end;
     margin-top: 150px;
     margin-right: 20px;
+  }
+
+  .nav_mobile {
+    display: none;
   }
 
   .nav_section {
