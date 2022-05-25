@@ -5,7 +5,6 @@ const id = params.get("id");
 const blogPost = document.querySelector(".blog_posts");
 const baseUrl = "https://chasju.online/allthingsjupiter/wp-json/wp/v2/posts/";
 const idUrl = baseUrl + id + "?acf_format=standard";
-console.log(idUrl);
 
 async function getBlogPost(url) {
   const response = await fetch(url);
@@ -23,6 +22,18 @@ async function getBlogPost(url) {
             ${post.acf.paragraph}
           </p>
         </section>`;
+  const blogImage = document.querySelector(".blog_image");
+  const modal = document.querySelector(".modal_container");
+
+  blogImage.addEventListener("click", () => {
+    modal.style.display = "block";
+  });
+
+  window.addEventListener("click", (e) => {
+    if (e.target === modal) {
+      modal.style.display = "none";
+    }
+  });
 }
 
 getBlogPost(idUrl);
