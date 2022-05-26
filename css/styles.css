@@ -66,6 +66,7 @@ header {
   position: absolute;
   top: 60px;
   left: 0;
+  z-index: 9;
 }
 
 .back_button-desktop {
@@ -418,6 +419,9 @@ footer p {
   width: 90%;
   max-width: 550px;
   margin: auto;
+  border-bottom: 1px solid var(--dark);
+  padding-top: 20px;
+  padding-bottom: 100px;
 }
 
 .blog_post p {
@@ -493,11 +497,19 @@ footer p {
 .blog_image-modal {
   background-image: url(/images/jupiter.jpg);
   background-position: center;
+  background-size: cover;
   background-repeat: no-repeat;
   border-radius: 10px;
-  width: 90%;
+  width: 100%;
+  max-width: 1000px;
   height: 80vh;
   object-fit: cover;
+  margin: auto;
+}
+
+.image_link {
+  display: block;
+  width: 1000px;
   margin: auto;
 }
 
@@ -685,6 +697,7 @@ footer p {
 
   .nav_mobile {
     display: none;
+    box-shadow: unset;
   }
 
   .nav_section {

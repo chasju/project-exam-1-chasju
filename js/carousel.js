@@ -73,7 +73,7 @@ if (window.innerWidth <= "900") {
   getPosts(baseUrl);
 }
 
-// Window width desktop
+// Window width more than 900
 
 if (window.innerWidth >= "900") {
   async function getPosts(url) {
@@ -104,7 +104,7 @@ if (window.innerWidth >= "900") {
           break;
         }
 
-        containerImagesDesktop.innerHTML += `<a href="/blogpage.html"
+        containerImagesDesktop.innerHTML += `<a href="/blogpage.html?id=${posts[i].id}"
                 ><div class="latest_image" style="background-image: url(${posts[i].acf.header_image})"></div>
                 <h3>${posts[i].acf.headline}</h3></a
               >`;
@@ -120,14 +120,13 @@ if (window.innerWidth >= "900") {
           break;
         }
 
-        containerImagesDesktop2.innerHTML += `<a href="/blogpage.html"
+        containerImagesDesktop2.innerHTML += `<a href="/blogpage.html?id=${posts[i].id}"
                 ><div class="latest_image" style="background-image: url(${posts[i].acf.header_image})"></div>
                 <h3>${posts[i].acf.headline}</h3></a
               >`;
       }
 
       const carouselContainer = document.querySelectorAll(".carousel_images");
-      const carouselImage = document.querySelectorAll(".carousel_images a");
       const nextButton = document.querySelector(".right_arrow");
       const prevButton = document.querySelector(".left_arrow");
 
@@ -166,9 +165,3 @@ if (window.innerWidth >= "900") {
 
   getPosts(baseUrl);
 }
-
-// perPage.onchange = (event)=> {
-// const newUrl = baseUrl + `?per_page=${event.target.value}`;
-//     productContainer.innerhtml = "";
-//     getProducts(newUrl);
-// }

@@ -7,12 +7,13 @@ const baseUrl = "https://chasju.online/allthingsjupiter/wp-json/wp/v2/posts/";
 const idUrl = baseUrl + id + "?acf_format=standard";
 
 async function getBlogPost(url) {
-  const response = await fetch(url);
-  const post = await response.json();
+  try {
+    const response = await fetch(url);
+    const post = await response.json();
 
-  document.title = `${post.acf.headline}`;
+    document.title = `${post.acf.headline}`;
 
-  blogPost.innerHTML = `<section class="blog_post">
+    blogPost.innerHTML = `<section class="blog_post">
           <header class="headline_container blogpage_container">
             <h1>${post.acf.headline}</h1>
             <p class="blog_meta">${post.formatted_date}</p>
@@ -22,18 +23,24 @@ async function getBlogPost(url) {
             ${post.acf.paragraph}
           </p>
         </section>`;
-  const blogImage = document.querySelector(".blog_image");
-  const modal = document.querySelector(".modal_container");
 
-  blogImage.addEventListener("click", () => {
-    modal.style.display = "block";
-  });
+    const blogImage = document.querySelector(".blog_image");
+    const modal = document.querySelector(".modal_container");
 
-  window.addEventListener("click", (e) => {
-    if (e.target === modal) {
-      modal.style.display = "none";
-    }
-  });
+    blogImage.addEventListener("click", () => {
+      modal.innerHTML = `<a href="${post.acf.header_image}" class="image_link"><div class="blog_image-modal" style="background-image: url(${post.acf.header_image})"></div></a>`;
+      modal.style.display = "block";
+    });
+
+    window.addEventListener("click", (e) => {
+      if (e.target === modal) {
+        modal.style.display = "none";
+      }
+    });
+  } catch (error) {
+    console.log(error);
+    blogPost.innerHTML = error;
+  }
 }
 
 getBlogPost(idUrl);

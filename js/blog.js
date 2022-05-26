@@ -3,13 +3,14 @@ const moreButton = document.querySelector(".cta_button");
 const baseUrl = "https://chasju.online/allthingsjupiter/wp-json/wp/v2/posts?acf_format=standard";
 
 async function getPosts(url) {
-  const response = await fetch(url);
-  const posts = await response.json();
+  try {
+    const response = await fetch(url);
+    const posts = await response.json();
 
-  blogPosts.innerHTML = "";
+    blogPosts.innerHTML = "";
 
-  for (let i = 0; i < posts.length; i++) {
-    blogPosts.innerHTML += `<section class="blog_post">
+    for (let i = 0; i < posts.length; i++) {
+      blogPosts.innerHTML += `<section class="blog_post">
           <a href="/blogpage.html?id=${posts[i].id}"><header class="headline_container blog_header">
             <h2>${posts[i].acf.headline}</h2>
             <p class="blog_meta">${posts[i].formatted_date}</p>
@@ -19,6 +20,10 @@ async function getPosts(url) {
             ${posts[i].acf.paragraph}
           </p></a>
         </section>`;
+    }
+  } catch (error) {
+    console.log(error);
+    blogPosts.innerHTML = error;
   }
 }
 
