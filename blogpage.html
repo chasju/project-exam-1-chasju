@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
     <meta name="description" content="Blogpost" />
     <meta name="robots" content="index, follow" />
     <!-- Hotjar Tracking Code for https://allthingsjupiter.netlify.app -->
@@ -41,14 +41,12 @@
       <div class="modal_container">
         <div class="blog_image-modal"></div>
       </div>
-
       <nav class="nav_mobile">
         <button aria-label="close navigation" class="close"></button>
         <ul>
           <li><a href="/index.html">home</a></li>
           <li><a href="/blog.html" class="active">blog</a></li>
           <li><a href="/about.html">about</a></li>
-          <li><a href="/categories.html">categories</a></li>
           <li><a href="/contact.html">contact</a></li>
           <li>
             <div class="search_content">
@@ -72,7 +70,6 @@
                 <li><a href="/index.html">home</a></li>
                 <li><a href="/blog.html" class="active">blog</a></li>
                 <li><a href="/about.html">about</a></li>
-                <li><a href="/categories.html">categories</a></li>
                 <li><a href="/contact.html">contact</a></li>
                 <li>
                   <div class="search_content">
@@ -81,9 +78,9 @@
                         type="text"
                         aria-label="search"
                         placeholder="Search"
-                        class="search_input"
+                        class="search_input search_input-desktop"
                       />
-                      <button aria-label="submit search" class="search_button">
+                      <button aria-label="submit search" class="search_button-desktop">
                         <i class="fa-solid fa-magnifying-glass"></i>
                       </button>
                     </div>
@@ -120,5 +117,6 @@
     <footer class="footer_section"><p>Copyright 'all things Jupiter' 2022</p></footer>
     <script src="/js/index.js"></script>
     <script src="/js/blogpage.js"></script>
+    <script src="/js/search.js"></script>
   </body>
 </html>

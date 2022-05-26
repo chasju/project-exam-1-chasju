@@ -24,3 +24,15 @@ backMobile.forEach(function (button) {
     history.back();
   });
 });
+
+// Getting search input and search on enter
+
+const searchInputs = document.querySelectorAll(".search_input");
+
+searchInputs.forEach((searchInput) => {
+  searchInput.addEventListener("keypress", (e) => {
+    if (e.key === "Enter") {
+      location.href = `/search.html?search=${searchInput.value}`;
+    }
+  });
+});

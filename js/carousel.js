@@ -19,7 +19,6 @@ if (window.innerWidth <= "900") {
       const posts = await response.json();
 
       containerImages.innerHTML = "";
-      console.log(posts.length);
 
       for (let i = 0; i < posts.length; i++) {
         if (i >= 8) {

@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
     <meta name="description" content="Search categories on all things Jupiter" />
     <meta name="robots" content="noindex, nofollow" />
     <!-- Hotjar Tracking Code for https://allthingsjupiter.netlify.app -->
@@ -44,7 +44,6 @@
           <li><a href="/index.html" class="active">home</a></li>
           <li><a href="/blog.html">blog</a></li>
           <li><a href="/about.html">about</a></li>
-          <li><a href="/categories.html">categories</a></li>
           <li><a href="/contact.html">contact</a></li>
           <li>
             <div class="search_content">
@@ -68,13 +67,17 @@
                 <li><a href="/index.html">home</a></li>
                 <li><a href="/blog.html">blog</a></li>
                 <li><a href="/about.html">about</a></li>
-                <li><a href="/categories.html" class="active">categories</a></li>
                 <li><a href="/contact.html">contact</a></li>
                 <li>
                   <div class="search_content">
                     <div class="search">
-                      <input type="text" autofocus aria-label="search" class="search_input" />
-                      <button aria-label="submit search" class="search_button">
+                      <input
+                        type="text"
+                        aria-label="search"
+                        placeholder="Search"
+                        class="search_input search_input-desktop"
+                      />
+                      <button aria-label="submit search" class="search_button-desktop">
                         <i class="fa-solid fa-magnifying-glass"></i>
                       </button>
                     </div>
@@ -100,35 +103,23 @@
       <section class="headline_container main_section">
         <button class="back_button back_button-desktop">Back</button>
         <h1>Search</h1>
+        <input
+          type="text"
+          aria-label="search"
+          placeholder="Search"
+          class="search_input search_input-desktop search_onpage"
+        />
         <div class="search_results">
-          <div class="result_item">
-            <a href="/blogpage.html"
-              ><div class="latest_image"></div>
-              <h3>Example</h3></a
-            >
-          </div>
-          <div class="result_item">
-            <a href="/blogpage.html"
-              ><div class="latest_image"></div>
-              <h3>Example</h3></a
-            >
-          </div>
-          <div class="result_item">
-            <a href="/blogpage.html"
-              ><div class="latest_image"></div>
-              <h3>Example</h3></a
-            >
-          </div>
-          <div class="result_item">
-            <a href="/blogpage.html"
-              ><div class="latest_image"></div>
-              <h3>Example</h3></a
-            >
+          <div class="dots__container loader">
+            <div class="one"></div>
+            <div class="two"></div>
+            <div class="three"></div>
           </div>
         </div>
       </section>
     </main>
     <footer class="footer_section"><p>Copyright 'all things Jupiter' 2022</p></footer>
     <script src="/js/index.js"></script>
+    <script src="/js/search.js"></script>
   </body>
 </html>
