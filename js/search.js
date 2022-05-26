@@ -18,7 +18,7 @@ const paramsSearch = new URLSearchParams(queryStringSearch);
 const searchValue = paramsSearch.get("search");
 
 const searchUrl =
-  "http://chasju.online/allthingsjupiter/wp-json/wp/v2/search/?per_page=20" +
+  "https://chasju.online/allthingsjupiter/wp-json/wp/v2/search/?per_page=20" +
   `&search=${searchValue}`;
 
 const searchResults = document.querySelector(".search_results");
