@@ -34,6 +34,7 @@ button {
 body {
   width: 100vw;
   min-height: 100vh;
+  overflow: hidden;
   position: relative;
   font-family: "monserrat", Verdana, Geneva, Tahoma, sans-serif;
 }
@@ -93,6 +94,7 @@ nav {
 }
 
 .nav_mobile {
+  display: flex;
   position: absolute;
   max-width: unset;
   width: 100%;
@@ -101,6 +103,9 @@ nav {
   box-shadow: 3px 3px 20px rgba(79, 70, 62, 0.5);
   -webkit-appearance: none;
   -webkit-box-shadow: 3px 3px 20px rgba(79, 70, 62, 0.5);
+  transform: translateY(-80vh);
+  transition: transform 0.5s ease-in-out;
+  opacity: 0;
 }
 
 nav ul {
@@ -621,7 +626,8 @@ footer p {
 /* Search */
 
 .search_onpage {
-  width: 450px;
+  width: 100%;
+  max-width: 450px;
   padding: 20px;
   margin-bottom: 100px;
   border-radius: 10px;
@@ -648,7 +654,7 @@ footer p {
 }
 
 .result_item {
-  width: 400px;
+  width: 90%;
   border-radius: 10px;
   text-align: center;
   margin: 40px auto;

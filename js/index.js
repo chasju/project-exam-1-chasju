@@ -6,12 +6,13 @@ if (window.innerWidth < "900") {
   const closeMenu = document.querySelector(".close");
 
   hamMenu.addEventListener("click", () => {
-    menu.style.display = "flex";
+    menu.style.transform = "translateY(0)";
+    menu.style.opacity = "1";
   });
 
   closeMenu.addEventListener("click", (event) => {
     event.stopPropagation();
-    menu.style.display = "none";
+    menu.style.transform = "translateY(-80vh)";
   });
 }
 
