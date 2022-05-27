@@ -1,10 +1,11 @@
 // Open search box desktop
 
 if (window.innerWidth > 900) {
-  const searchInput = document.querySelector(".search_input-desktop");
   const searchButton = document.querySelector(".search_button-desktop");
 
   function openSearch() {
+    const searchInput = document.querySelector(".search_input-desktop");
+
     searchInput.classList.toggle("open");
   }
 
@@ -39,7 +40,6 @@ async function searchPosts(url) {
     });
 
     if (searchResults.innerHTML === "") {
-      console.log("hello");
       searchResults.innerHTML = `<h2 class="no_results">No Results for "${searchValue}"</h2>`;
     }
   } catch (error) {
