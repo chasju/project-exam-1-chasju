@@ -5,7 +5,6 @@ if (window.innerWidth > 900) {
 
   function openSearch() {
     const searchInput = document.querySelector(".search_input-desktop");
-
     searchInput.classList.toggle("open");
   }
 

@@ -13,7 +13,7 @@ window.onresize = () => {
 // Window width less than 900
 
 if (window.innerWidth <= "900") {
-  async function getPosts(url) {
+  async function getPostsMobile(url) {
     try {
       const response = await fetch(url);
       const posts = await response.json();
@@ -69,7 +69,7 @@ if (window.innerWidth <= "900") {
     }
   }
 
-  getPosts(baseUrl);
+  getPostsMobile(baseUrl);
 }
 
 // Window width more than 900
