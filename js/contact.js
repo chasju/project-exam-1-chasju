@@ -84,7 +84,9 @@ function sendInformation(e) {
     .then((response) => response.json())
     .then((response) => {
       if (isFormSubmissionError(response)) {
-        console.log("good riddens");
+        location.href = "https://allthingsjupiter.netlify.app/contact.html";
+        form.remove();
+        thankYouMessage.style.display = "block";
       }
     })
     .catch((error) => {
