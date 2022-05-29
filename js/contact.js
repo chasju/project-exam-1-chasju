@@ -50,11 +50,25 @@ function formSuccess(e) {
   }
 
   if (formValid) {
+    // const newForm = e.target;
+    // let body = new FormData(newForm);
+    // console.log(body);
+
+    // async (action, { method, body }) => {
+    //   try {
+    //     const response = await fetch(action, { method, body });
+    //     const results = await response.json();
+    //     console.log(results);
+    //   } catch (error) {
+    //     console.log(error);
+    //   }
+    // };
+
+    sendInformation(e);
+
     form.remove();
     thankYouMessage.style.display = "block";
   }
-
-  form.addEventListener("submit", sendInformation);
 }
 
 function checkLength(value, length) {
@@ -71,28 +85,21 @@ function validateEmail(email) {
   return patternMatches;
 }
 
-form.addEventListener("submit", sendInformation);
+form.addEventListener("submit", formSuccess);
 
-// Sending form information
+// Sending form information to Wordpress
 
 function sendInformation(e) {
-  form = e.target;
-  let body = new FormData(form);
-  console.log(body);
+  const newForm = e.target;
+  let body = new FormData(newForm);
+  const action =
+    "https://chasju.online/allthingsjupiter/wp-json/contact-form-7/v1/contact-forms/84/feedback";
+  const method = "POST";
 
-  fetch(action, { method, body })
+  fetch(action, {
+    method,
+    body,
+  })
     .then((response) => response.json())
-    .then((response) => {
-      if (isFormSubmissionError(response)) {
-        location.href = "https://allthingsjupiter.netlify.app/contact.html";
-        form.remove();
-        thankYouMessage.style.display = "block";
-      }
-      location.href = "https://allthingsjupiter.netlify.app/contact.html";
-      form.remove();
-      thankYouMessage.style.display = "block";
-    })
-    .catch((error) => {
-      console.log("idontknowwhatimdoing");
-    });
+    .catch((error) => console.log(error));
 }
