@@ -473,6 +473,7 @@ footer p {
 
 .contact_button {
   border-radius: 5px;
+  cursor: pointer;
 }
 
 .blogpage_container h1 {

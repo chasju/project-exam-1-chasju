@@ -108,23 +108,32 @@
         <h1>Contact</h1>
       </section>
       <section class="contact_container">
-        <form action="submit">
+        <form
+          action="https://chasju.online/allthingsjupiter/wp-json/contact-form-7/v1/contact-forms"
+          method="POST"
+        >
           <div>
             <label for="fullName">name</label>
-            <input type="text" name="name" id="fullName" class="fullName" />
+            <input type="text" name="your-name" id="fullName" class="fullName" />
             <p class="error_message error_name">Required. Must be 5 characters or longer.</p>
             <label for="email">email address</label>
-            <input type="email" name="email" id="email" class="email" />
+            <input type="email" name="your-email" id="email" class="email" />
             <p class="error_message error_email">Required. Must be a valid email address.</p>
             <label for="subject">subject</label>
-            <input type="text" name="subject" id="subject" class="subject" />
+            <input type="text" name="your-subject" id="subject" class="subject" />
             <p class="error_message error_subject">Required. Must be 15 characters or longer.</p>
           </div>
           <div>
             <label for="textarea">message</label>
-            <textarea name="textarea" id="textarea" class="textarea" cols="30" rows="10"></textarea>
+            <textarea
+              name="your-message"
+              id="textarea"
+              class="textarea"
+              cols="30"
+              rows="10"
+            ></textarea>
             <p class="error_message error_textarea">Required. Must be 25 characters or longer.</p>
-            <button class="cta_button contact_button">Send</button>
+            <input type="submit" class="cta_button contact_button" />
           </div>
         </form>
         <article class="thankyou_message">

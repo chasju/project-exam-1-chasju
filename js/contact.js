@@ -53,6 +53,8 @@ function formSuccess(e) {
     form.remove();
     thankYouMessage.style.display = "block";
   }
+
+  form.addEventListener("submit", sendInformation);
 }
 
 function checkLength(value, length) {
@@ -69,4 +71,23 @@ function validateEmail(email) {
   return patternMatches;
 }
 
-form.addEventListener("submit", formSuccess);
+form.addEventListener("submit", sendInformation);
+
+// Sending form information
+
+function sendInformation(e) {
+  form = e.target;
+  let body = new FormData(form);
+  console.log(body);
+
+  fetch(action, { method, body })
+    .then((response) => response.json())
+    .then((response) => {
+      if (isFormSubmissionError(response)) {
+        console.log("good riddens");
+      }
+    })
+    .catch((error) => {
+      console.log("idontknowwhatimdoing");
+    });
+}
