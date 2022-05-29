@@ -44,14 +44,19 @@
       <nav class="nav_mobile">
         <button aria-label="close navigation" class="close"></button>
         <ul>
-          <li><a href="/index.html" class="active">home</a></li>
+          <li><a href="/index.html" class="active" aria-current="page">home</a></li>
           <li><a href="/blog.html">blog</a></li>
           <li><a href="/about.html">about</a></li>
           <li><a href="/contact.html">contact</a></li>
           <li>
             <div class="search_content-mobile">
               <div class="search">
-                <input type="text" aria-label="search" placeholder="Search" class="search_input" />
+                <input
+                  type="text"
+                  aria-label="search input, press enter to search"
+                  placeholder="Search"
+                  class="search_input"
+                />
                 <button aria-label="submit search" class="search_button">
                   <i class="fa-solid fa-magnifying-glass"></i>
                 </button>
@@ -62,11 +67,11 @@
       </nav>
       <div class="top_container">
         <div class="topInner_container">
-          <div class="nav_container">
+          <div class="nav_container" aria-label="open navigation">
             <nav>
               <button aria-label="close navigation" class="close"></button>
               <ul>
-                <li><a href="/index.html" class="active">home</a></li>
+                <li><a href="/index.html" class="active" aria-current="page">home</a></li>
                 <li><a href="/blog.html">blog</a></li>
                 <li><a href="/about.html">about</a></li>
                 <li><a href="/contact.html">contact</a></li>
@@ -76,7 +81,7 @@
                       <input
                         type="text"
                         name="search"
-                        aria-label="search"
+                        aria-label="search input, press enter to search"
                         placeholder="Search"
                         class="search_input search_input-desktop"
                       />
@@ -96,9 +101,9 @@
           </div>
         </div>
       </div>
-      <div class="header_img"></div>
-      <div class="breadcrumbs">
-        <p>Home</p>
+      <div class="header_img" aria-label="header image"></div>
+      <div class="breadcrumbs" role="navigation" aria-label="navigation">
+        <p aria-current="page">Home</p>
       </div>
     </header>
     <main class="main_index">
@@ -107,8 +112,8 @@
         <h1>Jupiter</h1>
       </section>
       <section class="latest_container">
-        <button class="left_arrow"></button>
-        <button class="right_arrow"></button>
+        <button class="left_arrow" aria-label="navigate left in carousel"></button>
+        <button class="right_arrow" aria-label="navigate right in carousel"></button>
         <div class="latestPosts_container">
           <h2>Latest Posts</h2>
           <div class="carousel_container">

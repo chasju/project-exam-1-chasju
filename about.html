@@ -46,12 +46,17 @@
         <ul>
           <li><a href="/index.html">home</a></li>
           <li><a href="/blog.html">blog</a></li>
-          <li><a href="/about.html" class="active">about</a></li>
+          <li><a href="/about.html" class="active" aria-current="page">about</a></li>
           <li><a href="/contact.html">contact</a></li>
           <li>
             <div class="search_content">
               <div class="search">
-                <input type="text" aria-label="search" placeholder="Search" class="search_input" />
+                <input
+                  type="text"
+                  aria-label="search input, press enter to search"
+                  placeholder="Search"
+                  class="search_input"
+                />
                 <button aria-label="submit search" class="search_button">
                   <i class="fa-solid fa-magnifying-glass"></i>
                 </button>
@@ -63,20 +68,20 @@
       <div class="top_container">
         <button class="back_button">Back</button>
         <div class="topInner_container">
-          <div class="nav_container">
+          <div class="nav_container" aria-label="open navigation">
             <nav class="nav_section">
               <button aria-label="close navigation" class="close"></button>
               <ul>
                 <li><a href="/index.html">home</a></li>
                 <li><a href="/blog.html">blog</a></li>
-                <li><a href="/about.html" class="active">about</a></li>
+                <li><a href="/about.html" class="active" aria-current="page">about</a></li>
                 <li><a href="/contact.html">contact</a></li>
                 <li>
                   <div class="search_content">
                     <div class="search">
                       <input
                         type="text"
-                        aria-label="search"
+                        aria-label="search input, press enter to search"
                         placeholder="Search"
                         class="search_input search_input-desktop"
                       />
@@ -96,15 +101,17 @@
           </div>
         </div>
       </div>
-      <div class="header_img"></div>
-      <div class="breadcrumbs">
-        <p><a href="/index.html">Home</a></p>
-        <p>| About</p>
+      <div class="header_img" aria-label="header image"></div>
+      <div class="breadcrumbs" role="navigation" aria-label="navigation">
+        <p aria-label="Home"><a href="/index.html">Home</a></p>
+        <p aria-current="page">| About</p>
       </div>
     </header>
     <main>
       <section class="headline_container main_section">
-        <button class="back_button back_button-desktop">Back</button>
+        <button class="back_button back_button-desktop" aria-label="go back to previous page">
+          Back
+        </button>
         <h1>About</h1>
         <p>Jupiter is the best - don’t you agree?</p>
         <p>

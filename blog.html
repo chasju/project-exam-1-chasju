@@ -42,13 +42,18 @@
         <button aria-label="close navigation" class="close"></button>
         <ul>
           <li><a href="/index.html">home</a></li>
-          <li><a href="/blog.html" class="active">blog</a></li>
+          <li><a href="/blog.html" class="active" aria-current="page">blog</a></li>
           <li><a href="/about.html">about</a></li>
           <li><a href="/contact.html">contact</a></li>
           <li>
             <div class="search_content">
               <div class="search">
-                <input type="text" aria-label="search" placeholder="Search" class="search_input" />
+                <input
+                  type="text"
+                  aria-label="search input, press enter to search"
+                  placeholder="Search"
+                  class="search_input"
+                />
                 <button aria-label="submit search" class="search_button">
                   <i class="fa-solid fa-magnifying-glass"></i>
                 </button>
@@ -60,12 +65,12 @@
       <div class="top_container">
         <button class="back_button">Back</button>
         <div class="topInner_container">
-          <div class="nav_container">
+          <div class="nav_container" aria-label="open navigation">
             <nav class="nav_section">
               <button aria-label="close navigation" class="close"></button>
               <ul>
                 <li><a href="/index.html">home</a></li>
-                <li><a href="/blog.html" class="active">blog</a></li>
+                <li><a href="/blog.html" class="active" aria-current="page">blog</a></li>
                 <li><a href="/about.html">about</a></li>
                 <li><a href="/contact.html">contact</a></li>
                 <li>
@@ -73,7 +78,7 @@
                     <div class="search">
                       <input
                         type="text"
-                        aria-label="search"
+                        aria-label="search input, press enter to search"
                         placeholder="Search"
                         class="search_input search_input-desktop"
                       />
@@ -93,15 +98,17 @@
           </div>
         </div>
       </div>
-      <div class="header_img"></div>
-      <div class="breadcrumbs">
-        <p><a href="/index.html">Home</a></p>
-        <p>| Blog</p>
+      <div class="header_img" aria-label="header image"></div>
+      <div class="breadcrumbs" role="navigation" aria-label="navigation">
+        <p aria-label="Home"><a href="/index.html">Home</a></p>
+        <p aria-current="page">| Blog</p>
       </div>
     </header>
     <main>
       <section class="headline_container main_section blog_section">
-        <button class="back_button back_button-desktop">Back</button>
+        <button class="back_button back_button-desktop" aria-label="go back to previous page">
+          Back
+        </button>
         <p>All things</p>
         <h1>Jupiter</h1>
       </section>
@@ -112,7 +119,7 @@
           <div class="three"></div>
         </div>
       </div>
-      <button class="cta_button">More</button>
+      <button class="cta_button" aria-label="click for more blog posts">More</button>
     </main>
     <footer class="footer_section"><p>Copyright 'all things Jupiter' 2022</p></footer>
     <script src="/js/index.js"></script>
