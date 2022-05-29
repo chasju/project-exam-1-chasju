@@ -577,6 +577,10 @@ footer p {
   -webkit-box-shadow: 3px 3px 20px rgba(79, 70, 62, 0.5);
 }
 
+.contact_container textarea {
+  padding-top: 10px;
+}
+
 .contact_container input:not(:last-child) {
   margin-bottom: 15px;
 }
@@ -918,10 +922,6 @@ footer p {
 
   .contact_container div:nth-child(2) {
     margin-top: unset;
-  }
-
-  .contact_container textarea {
-    height: 100%;
   }
 
   .contact_button {
