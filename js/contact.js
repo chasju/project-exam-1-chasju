@@ -88,6 +88,9 @@ function sendInformation(e) {
         form.remove();
         thankYouMessage.style.display = "block";
       }
+      location.href = "https://allthingsjupiter.netlify.app/contact.html";
+      form.remove();
+      thankYouMessage.style.display = "block";
     })
     .catch((error) => {
       console.log("idontknowwhatimdoing");
