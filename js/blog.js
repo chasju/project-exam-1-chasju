@@ -15,7 +15,7 @@ async function getPosts(url) {
             <h2>${posts[i].acf.headline}</h2>
             <p class="blog_meta">${posts[i].formatted_date}</p>
           </header>
-          <div class="blog_image" style="background-image: url(${posts[i].acf.header_image})"></div>
+          <div class="blog_image" aria-label="image for ${posts[i].acf.headline}" style="background-image: url(${posts[i].acf.header_image})"></div>
           <p>
             ${posts[i].acf.paragraph}
           </p></a>

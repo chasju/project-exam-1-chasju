@@ -26,7 +26,7 @@ if (window.innerWidth <= "900") {
         }
 
         containerImages.innerHTML += `<a href="/blogpage.html?id=${posts[i].id}"
-                ><div class="latest_image" style="background-image: url(${posts[i].acf.header_image})"></div>
+                ><div class="latest_image" aria-label="image for ${posts[i].acf.headline}" style="background-image: url(${posts[i].acf.header_image})"></div>
                 <h3>${posts[i].acf.headline}</h3></a
               >`;
       }
@@ -88,7 +88,7 @@ if (window.innerWidth >= "900") {
         }
 
         containerImages.innerHTML += `<a href="/blogpage.html?id=${posts[i].id}"
-                ><div class="latest_image" style="background-image: url(${posts[i].acf.header_image})"></div>
+                ><div class="latest_image" aria-label="image for ${posts[i].acf.headline}" style="background-image: url(${posts[i].acf.header_image})"></div>
                 <h3>${posts[i].acf.headline}</h3></a
               >`;
       }
@@ -104,7 +104,7 @@ if (window.innerWidth >= "900") {
         }
 
         containerImagesDesktop.innerHTML += `<a href="/blogpage.html?id=${posts[i].id}"
-                ><div class="latest_image" style="background-image: url(${posts[i].acf.header_image})"></div>
+                ><div class="latest_image" aria-label="image for ${posts[i].acf.headline}" style="background-image: url(${posts[i].acf.header_image})"></div>
                 <h3>${posts[i].acf.headline}</h3></a
               >`;
       }
@@ -120,7 +120,7 @@ if (window.innerWidth >= "900") {
         }
 
         containerImagesDesktop2.innerHTML += `<a href="/blogpage.html?id=${posts[i].id}"
-                ><div class="latest_image" style="background-image: url(${posts[i].acf.header_image})"></div>
+                ><div class="latest_image" aria-label="image for ${posts[i].acf.headline}" style="background-image: url(${posts[i].acf.header_image})"></div>
                 <h3>${posts[i].acf.headline}</h3></a
               >`;
       }

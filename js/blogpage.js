@@ -18,7 +18,7 @@ async function getBlogPost(url) {
             <h1>${post.acf.headline}</h1>
             <p class="blog_meta">${post.formatted_date}</p>
           </header>
-          <div class="blog_image" style="background-image: url(${post.acf.header_image})"></div>
+          <div class="blog_image" aria-label="image for ${post.acf.headline}" style="background-image: url(${post.acf.header_image})"></div>
           <p>
             ${post.acf.paragraph}
           </p>
@@ -28,7 +28,7 @@ async function getBlogPost(url) {
     const modal = document.querySelector(".modal_container");
 
     blogImage.addEventListener("click", () => {
-      modal.innerHTML = `<a href="${post.acf.header_image}" class="image_link"><div class="blog_image-modal" style="background-image: url(${post.acf.header_image})"></div></a>`;
+      modal.innerHTML = `<a href="${post.acf.header_image}" class="image_link"><div class="blog_image-modal" aria-label="image for ${post.acf.headline}" style="background-image: url(${post.acf.header_image})"></div></a>`;
       modal.style.display = "block";
     });
 
